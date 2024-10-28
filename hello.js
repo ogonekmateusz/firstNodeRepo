@@ -1,8 +1,14 @@
-const fs = require('fs')
+setInterval(() => {
+    let date = new Date();
+    console.clear()
+    console.log(date.toLocaleTimeString());
+}, 1000);
 
-fs.readFile("example.txt",'utf8',(err,data)=>{
-    if(err){
-        console.log(`Bład ${err}`)
-    }
-    console.log(data)
+
+const { log } = require('console');
+const fs = require('fs');
+
+fs.readFile("example.txt",'utf8', (err,data) => {
+    if(err) console.log("Błąd podczas odczytu pliku")
+    else console.log(data);
 })
