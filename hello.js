@@ -5,7 +5,6 @@ setInterval(() => {
 }, 1000);
 
 
-const { log } = require('console');
 const fs = require('fs');
 
 fs.readFile("example.txt",'utf8', (err,data) => {
